@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Spotify</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body class="bg-black">
+    <!-- nav bar -->
+    <nav class="flex items-center justify-between bg-black h-16 px-6">
+        <div class="flex items-center space-x-6">
+            <!-- Spotify Logo -->
+            <img src="/images/spotify.png" class="h-10">
+            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white">
+                <img src="/images/home.png" class="h-6 invert">
+                <span class="font-semibold">Home</span>
+            </a>
+            <div class="relative w-96">
+                <input type="text" placeholder="What do you want to play?" 
+                    class="w-full bg-gray-900 text-white placeholder-gray-400 text-sm rounded-full py-2 pl-10 pr-4 outline-none focus:ring-2 focus:ring-white">
+                <img src="/images/search-interface-symbol.png" class="absolute left-3 top-2 h-5 w-5 invert">
+            </div>
+        </div>
+
+        <!-- Right Side: Links & Buttons -->
+        <div class="flex items-center space-x-6 text-gray-400 text-sm font-medium">
+            <a href="#" class="hover:text-white">Premium</a>
+            <a href="#" class="hover:text-white">Support</a>
+            <a href="#" class="hover:text-white">Download</a>
+            <span class="border-l border-gray-600 h-6"></span> 
+            <a href="#" class="hover:text-white">Install App</a>
+            
+            <!-- Auth Buttons -->
+            <button class="hover:text-white">Sign In</button>
+            <button class="bg-white text-black py-2 px-6 rounded-full font-semibold hover:bg-gray-200 transition duration-300">Login</button>
+        </div>
+    </nav>
+     <!-- left content -->
+    <div class="flex">
+        <div class="w-1/3">
+            <!-- Main Box -->
+            <div class="flex flex-col justify-between w-70 h-60 bg-gray-950 rounded-xl p-4">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        <img src="/images/library.png" class="invert h-6">
+                        <span class="pl-2 text-gray-400 font-semibold">Your Library</span>
+                    </div>
+                    <img src="/images/plus.png" class="invert h-4">
+                </div>
+                <div class="mt-4 space-y-2 h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+                    <!-- Playlist Box 1 -->
+                    <div class="bg-gray-900 rounded-lg p-3">
+                        <h3 class="text-white font-semibold">Your Playlists</h3>
+                        <p class="text-gray-400 text-sm mb-2">Create and manage your playlists here.</p>
+                        <button class="bg-white py-1 px-6 rounded-full font-semibold hover:bg-gray-200 transition duration-200">Create playlist</button>
+                    </div>
+                    <!-- Playlist Box 2 -->
+                    <div class="bg-gray-900 rounded-lg p-3">
+                        <h3 class="text-white font-semibold">Your Podcast</h3>
+                        <p class="text-gray-400 text-sm mb-2">Explore more podcast collections.</p>
+                        <button class="bg-white py-1 px-6 rounded-full font-semibold hover:bg-gray-200 transition duration-200">Browse podcast</button>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="bg-black text-gray-400 py-6 px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <a href="#" class="hover:underline">Legal</a>
+                        <a href="#" class="hover:underline">Safety & Privacy Center</a>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <a href="#" class="hover:underline">Cookies</a>
+                        <a href="#" class="hover:underline">About Ads</a>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                    </div>
+                    <div class="mt-4">
+                        <button class="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700">
+                            <img src="/images/global.png" class="h-5 w-5 invert">
+                            <span>English</span>
+                        </button>
+                    </div>
+                    <hr class="border-gray-700 my-6">
+                </div>
+            </footer>        
+        </div>
+        <!-- right content -->
+        <div class="w-2/3 ml-3">
+            <!-- Main Box -->
+            <div class="h-full w-full rounded-xl p-4 bg-gray-950">
+                <div class="flex justify-between">
+                    <h1 class="text-2xl font-bold text-white  cursor-pointer hover:underline">Popular artists</h1>
+                    <p class="text-gray-500 font-semibold mt-6 cursor-pointer hover:underline">show all</p>
+                </div>
+                <div class="flex justify-evenly mt-3 gap-2">
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/artist/farhan.jpg" class="rounded-full h-32 transition duration-300">
+                        <p class="mt-2 text-center text-white text-xl font-normal cursor-pointer">Farhan</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <h1 class="text-2xl font-bold text-white mt-2 cursor-pointer hover:underline">Popular albums</h1>
+                    <p class="text-gray-500 font-semibold mt-6 cursor-pointer hover:underline">show all</p>
+                </div>
+                <div class="flex justify-evenly mt-3 gap-2">
+                    <div class="flex flex-col items-center">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/01/12/11/es-divide-final-artwork-lo-res.jpg" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.jvCt1Auukv11fZHgEfVfeAHaHV&w=200&h=198&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.OmOYTiNYQ-KlXvGvcYq0jgHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.6VBGnjKtq_8GtsslywFagAHaHY&w=200&h=199&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.737KXQsyKr68U8ufjGDfmQHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.dqP4k55ByUWis-YBaASNlgHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xl font-normal cursor-pointer">Album Name</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <h1 class="text-2xl font-bold text-white mt-2 cursor-pointer hover:underline">Popular radio</h1>
+                    <p class="text-gray-500 font-semibold mt-6 cursor-pointer hover:underline">show all</p>
+                </div>
+                <div class="flex justify-evenly mt-3 gap-2">
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.srsXkh3ZS91nczSAJ_zc9AHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Pakistani Pop</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.v0Fq5xz3o_Cq_8A3iRK6BwAAAA&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Today's Top Hits</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.lOBwGxzmuwQuPYNWlTo-2wAAAA&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Top 50 - Global</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.17shssDjHb-UPIAAUtICZAAAAA&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">New Music Friday</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.HiIXmF9FLFuZqzbjIxpAwAHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Mega Hit Mix - Bollywood Songs</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.hy70mRt11OcdY8Y7kykDawHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Rock Classics</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <h1 class="text-2xl font-bold text-gray-500 mt-2 cursor-pointer hover:underline">Popular podcast</h1>
+                    <p class="text-gray-500 font-semibold mt-6 cursor-pointer hover:underline">show all</p>
+                </div>
+                <div class="flex justify-evenly mt-3 gap-2">
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.bwFarME6F1qwYnSjY541aAHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Crime Junkie</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.wIaAKuxRoDzb3p1WQ0peFQHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">Shawn Ryan Show</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIF.3zzkLELoGRk%2B%2F53R8IAkGw&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">The Ranveer Show</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.4qjIrFXIQDFTZUqUFD7wIgHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">The Stories of Mahabharata</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.Tk1nDS2HKUfL5M6DzAcJcgHaGj&w=200&h=177&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500 text-xs font-normal cursor-pointer">The Internet Said So</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.prQUD071mCuCkeMg6e7ffQHaHa&w=200&h=200&c=7" class="rounded-xl h-32 transition duration-300">
+                        <p class="mt-2 text-center text-gray-500  text-xs font-normal cursor-pointer">The Daily</p>
+                    </div>
+                </div>
+                <!-- footer -->
+                <footer class="bg-black text-gray-400 px-10 py-8">
+                    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div>
+                            <h2 class="text-white font-bold text-lg">Company</h2>
+                            <ul class="mt-3 space-y-2">
+                                <li><a href="#" class="hover:text-white">About</a></li>
+                                <li><a href="#" class="hover:text-white">Jobs</a></li>
+                                <li><a href="#" class="hover:text-white">For the Record</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white font-bold text-lg">Communities</h2>
+                            <ul class="mt-3 space-y-2">
+                                <li><a href="#" class="hover:text-white">Artists</a></li>
+                                <li><a href="#" class="hover:text-white">Developers</a></li>
+                                <li><a href="#" class="hover:text-white">Brands</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white font-bold text-lg">Useful Links</h2>
+                            <ul class="mt-3 space-y-2">
+                                <li><a href="#" class="hover:text-white">Support</a></li>
+                                <li><a href="#" class="hover:text-white">Free Mobile App</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-white font-bold text-lg">Follow Us</h2>
+                            <div class="flex mt-3 space-x-4">
+                                <a href="#" class="hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- music button -->
+        <div class="fixed bottom-0 left-0 w-full bg-black text-white p-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img id="songCover" src="/artist/tahla.jpg" class="h-12 w-12 rounded-lg">
+                <div>
+                    <p id="songTitle" class="text-sm font-semibold">Song Name</p>
+                    <p id="songArtist" class="text-xs text-gray-400">Artist Name</p>
+                </div>
+            </div>
+        
+            <audio id="audioPlayer"></audio>
+        
+            <div class="flex items-center space-x-4">
+                <button id="prevBtn" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+                    <img src="/images/previous.png" class="h-6 invert">
+                </button>
+                <button id="playPauseBtn" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+                    <img id="playPauseIcon" src="/images/play-buttton.png" class="h-6 invert">
+                </button>
+                <button id="nextBtn" class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+                    <img src="/images/next.png" class="h-6 invert">
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const audioPlayer = document.getElementById('audioPlayer');
+                const songCover = document.getElementById('songCover');
+                const songTitle = document.getElementById('songTitle');
+                const songArtist = document.getElementById('songArtist');
+                const prevBtn = document.getElementById('prevBtn');
+                const playPauseBtn = document.getElementById('playPauseBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const playPauseIcon = document.getElementById('playPauseIcon'); 
+        
+                const songs = [
+                    { title: 'Song 1', artist: 'Artist 1', cover: '/artist/talha.jpg', audio: '/songs/song1.mp3' },
+                    { title: 'Song 2', artist: 'Artist 2', cover: '/artist/talha.jpg', audio: '/songs/song2.mp3' },
+                    { title: 'Song 3', artist: 'Artist 3', cover: '/artist/talha.jpg', audio: '/songs/song3.mp3' },
+                    { title: 'Song 4', artist: 'Artist 4', cover: '/artist/talha.jpg', audio: '/songs/song4.mp3' },
+                    { title: 'Song 5', artist: 'Artist 5', cover: '/artist/talha.jpg', audio: '/songs/song5.mp3' },
+                    { title: 'Song 6', artist: 'Artist 6', cover: '/artist/talha.jpg', audio: '/songs/song6.mp3' },
+                ];
+        
+                let idx = 0;
+        
+                const playSong = () => {
+                    audioPlayer.src = songs[idx].audio;
+                    songCover.src = songs[idx].cover;
+                    songTitle.textContent = songs[idx].title;
+                    songArtist.textContent = songs[idx].artist;
+                    audioPlayer.play();
+                    playPauseIcon.src = '/images/pause.png'; 
+                };
+        
+                playPauseBtn.addEventListener("click", () => { 
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        playPauseIcon.src ='/images/pause.png';
+                    } else {
+                        audioPlayer.pause();
+                        playPauseIcon.src = '/images/play-buttton.png'; 
+                    }
+                });
+        
+                // Previous Song Button
+                prevBtn.addEventListener("click", () => { 
+                    idx--;
+                    if (idx < 0) {
+                        idx = songs.length - 1;
+                    }
+                    playSong();
+                });
+        
+                // Next Song Button
+                nextBtn.addEventListener("click", () => { 
+                    idx++;
+                    if (idx >= songs.length) {
+                        idx = 0;
+                    }
+                    playSong();
+                });
+                audioPlayer.addEventListener("ended",()=>{
+                    idx++;
+                    if (idx >= songs.length) {
+                        idx = 0;
+                    }
+                    playSong();
+                })
+                playSong();
+            });
+        </script>
+</html>
